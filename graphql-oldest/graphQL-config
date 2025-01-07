@@ -1,0 +1,27 @@
+# Traditional way (older version of graphql setup) - Pedrotech Channel
+# https://spec.graphql.org/
+# https://www.apollographql.com/
+# https://graphql.org/learn/
+
+npm init
+npm install apollo-server graphql
+npm install nodemon
+npm start
+
+
+What is GraphQL? Why do we need?
+What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
+Advantages of GraphQL over RESTFUL API
+what is apollo-server module?
+what is schema (SDL) and resolver?
+what is ID type? what does it denote and the default value of ID would be?
+Does the scalar and primitive type same?
+What are the three basic types in GraphQL: Query, Mutation and Subscription?
+What is resolver map? what is resolver chain?
+What are all the fields could be top level fields of resolver map?
+What does exclamation signify in schema?
+what are the different supported types to define schema?
+Wha is custom scalar type? (refer: GraphQL apollo-server)
+What is the meaning of type [Movie!]! ?
+what is __typename in GraphQl?
+How to define query to fetch data of Users and Movies data in one-go?

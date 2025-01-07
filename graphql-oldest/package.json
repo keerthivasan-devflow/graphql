@@ -1,0 +1,20 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "GraphQL Demonstration",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.10.0",
+    "nodemon": "^3.1.9"
+  }, 
+  "compilerOptions": {
+    "allowJs": true
+}
+}
