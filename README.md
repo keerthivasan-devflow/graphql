@@ -3,11 +3,20 @@
 # https://www.apollographql.com/
 # https://graphql.org/learn/
 
+# GraphQL Server Configuration
 npm init - To create `package.json` file
 npm install apollo-server 
 npm install graphql
 npm install nodemon
 npm start
+
+# GrapghQL Client Configuration - w/ React
+npx create-react-app project-folder
+npm install @apollo/client
+
+Note: Apollo Client Chrome Extension
+
+25.00 to conitue... PedroTech useQuery
 
 # ERROR MESSAGE in GraphQL
 "errors":[{
