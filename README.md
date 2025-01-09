@@ -28,19 +28,54 @@ npm start
 3. How do you pass arguments to your types in the Query type, and how do you define a resolver for that?
 4. How to define the Query arguments as mandatory?
 
-What is GraphQL? Why do we need?
-What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
-Advantages of GraphQL over RESTFUL API
-what is apollo-server module?
-what is schema (SDL) and resolver?
-what is ID type? what does it denote and the default value of ID would be?
-Does the scalar and primitive type same?
-What are the three basic types in GraphQL: Query, Mutation and Subscription?
-What is resolver map? what is resolver chain?
-What are all the fields could be top level fields of resolver map?
-What does exclamation signify in schema?
-what are the different supported types to define schema?
-Wha is custom scalar type? (refer: GraphQL apollo-server)
-What is the meaning of type [Movie!]! ?
-what is __typename in GraphQl?
-How to define query to fetch data of Users and Movies data in one-go?
+
+# SYNTAX TO FETCH DATA FROM API - GET METHOD
+<!--  METHOD 1 -->
+query User($productName: String!){
+  users(city: "france"){
+    id
+    username
+    city
+  }
+  movies {
+    id
+    title
+    description
+  }
+  product(productName: $productName) {
+    productName
+    isAvailable
+    price
+  }
+}
+
+<!-- METHOD 2 -->
+query GetUsers($userId: ID!){
+  user(id: $userId) {
+    username
+    name
+    email
+    favoriteProducts {
+      productId
+      productName
+      price
+    }
+  }
+}
+
+1. What is GraphQL? Why do we need?
+2. What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
+3. Advantages of GraphQL over RESTFUL API
+4. what is apollo-server module?
+5. what is schema (SDL) and resolver?
+6. what is ID type? what does it denote and the default value of ID would be?
+7. Does the scalar and primitive type same?
+8. What are the three basic types in GraphQL: Query, Mutation and Subscription?
+9. What is resolver map? what is resolver chain?
+10. What are all the fields could be top level fields of resolver map?
+11. What does exclamation signify in schema?
+12. what are the different supported types to define schema?
+13. Wha is custom scalar type? (refer: GraphQL apollo-server)
+14. What is the meaning of type [Movie!]! ?
+15. what is __typename in GraphQl?
+16. How to define query to fetch data of Users and Movies data in one-go?

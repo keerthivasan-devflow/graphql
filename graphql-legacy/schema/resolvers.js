@@ -25,10 +25,19 @@ const resolvers = {
     movies: () => MoviesList,
     product: (_, args) => {
       const { productName } = args;
-      const Product = ProductList.find(
-        (product) => product.productName.includes(productName)
+      const Product = ProductList.find((product) =>
+        product.productName.includes(productName)
       );
       return Product;
+    },
+  },
+
+  User: {
+    favoriteProducts: () => {
+      const FavoriteProducts = ProductList.filter(
+        (product) => product.price > 100.0 && product.price < 200.0
+      );
+      return FavoriteProducts;
     },
   },
 };

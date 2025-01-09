@@ -34,6 +34,8 @@ const typeDefs = gql`
     email: String!
     city: City
     friends: [User]
+    # Created a separate resolver property for the below field. (see resolver implementation)
+    favoriteProducts: [Product]
   }
 
   type Query {
