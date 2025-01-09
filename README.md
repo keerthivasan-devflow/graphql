@@ -79,3 +79,20 @@ query GetUsers($userId: ID!){
 14. What is the meaning of type [Movie!]! ?
 15. what is __typename in GraphQl?
 16. How to define query to fetch data of Users and Movies data in one-go?
+
+
+# Setting Default Value:
+
+If you are using an input type in mutations or queries, you can set default values in the input object (but only at the application level, not directly in the GraphQL schema):
+
+input MovieInput {
+  title: String = "Untitled Movie"
+  description: String
+  isPublished: Boolean!
+}
+
+type Movie {
+  title: String = "Untitled Movie" <!-- Not directly in the GraphQL schema -->
+  description: String
+  isPublished: Boolean!
+}

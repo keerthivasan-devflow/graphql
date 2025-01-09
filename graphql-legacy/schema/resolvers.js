@@ -40,6 +40,35 @@ const resolvers = {
       return FavoriteProducts;
     },
   },
+
+  // Since directly pushing data will be simple but actually it is so complex while working w/ database.
+  Mutation: {
+    createUser: (_, args, context, info) => {
+      const user = args.input;
+      const lastInsertedId = UsersList[UsersList.length - 1]; // To get the id of last item from userslist.
+      user.id = Number(lastInsertedId) + 1;
+      UsersList.push(user); // To add user into the existing userslist
+      return user; // Return data in the GraphQL
+      // console.log(input)
+    },
+
+    updateUsername: (_, { username, id }) => {
+      const UpdatedUsername = UsersList.find((user) => {
+        user.id == Number(id) ? (user.username = username) : user;
+      });
+
+      return UpdatedUsername;
+    },
+
+    deleteUser: (_, { id }) => {
+      const index = UsersList.findIndex((user) => user.id === Number(id)); // Find the index of the user
+      if (index !== -1) {
+        const deletedUser = UsersList.splice(index, 1); // Remove the user from the array
+        return deletedUser[0]; // Return the deleted user (first element of the array returned by splice)
+      }
+      return null; // If user with given id is not found
+    },
+  },
 };
 
 module.exports = { resolvers };
