@@ -3,11 +3,30 @@
 # https://www.apollographql.com/
 # https://graphql.org/learn/
 
-npm init
-npm install apollo-server graphql
+npm init - To create `package.json` file
+npm install apollo-server 
+npm install graphql
 npm install nodemon
 npm start
 
+# ERROR MESSAGE in GraphQL
+"errors":[{
+    "message": "Cannot return null for non-nullable field User.name.",
+    "locations": [ 
+        {
+          "line": 4,
+          "column": 7
+        },
+    ],
+    "path":[ "users", 1, "name"],
+    "extension": {}
+}]
+
+# SCENARIO
+1. How do you define a basic type for any API data and retrieve the data w/o passing arguments in the Query type?
+2. How do you define an enum type in GraphQL?
+3. How do you pass arguments to your types in the Query type, and how do you define a resolver for that?
+4. How to define the Query arguments as mandatory?
 
 What is GraphQL? Why do we need?
 What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
