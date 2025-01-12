@@ -1,20 +1,29 @@
-# Traditional way (older version of graphql setup) - Pedrotech Channel
-# https://spec.graphql.org/
-# https://www.apollographql.com/
-# https://graphql.org/learn/
+## Traditional way of working with GraphQL
+1. Resource URLs
+- https://spec.graphql.org/
+- https://www.apollographql.com/
+- https://graphql.org/learn/
 
-# GraphQL Server Configuration
+2. YouTube Channel: PedroTech
+
+### GraphQL Server Configuration
 - npm init - To create `package.json` file
 - npm install apollo-server 
 - npm install graphql
 - npm install nodemon
 - npm start
 
-# GrapghQL Client Configuration - w/ React
+### GraphQL Client Configuration - w/ React
 - npx create-react-app project-folder
 - npm install @apollo/client
 
-# ERROR MESSAGE in GraphQL
+### Naming Convention in GraphQL
+- Fields: camelCase
+- Types: PascalCase
+- Enum names: PascalCase
+- Enum values: ALL CAPITALS
+
+### Error Message in GraphQL
 "errors":[{
     "message": "Cannot return null for non-nullable field User.name.",
     "locations": [ 
@@ -27,15 +36,15 @@
     "extension": {}
 }]
 
-# SCENARIO
+### Common Questions Practice
 1. How do you define a basic type for any API data and retrieve the data w/o passing arguments in the Query type?
 2. How do you define an enum type in GraphQL?
 3. How do you pass arguments to your types in the Query type, and how do you define a resolver for that?
 4. How to define the Query arguments as mandatory?
 
 
-# SYNTAX TO FETCH DATA FROM API - GET METHOD
-<!--  METHOD 1 -->
+### Syntax for Query type
+```
 query User($productName: String!){
   users(city: "france"){
     id
@@ -53,20 +62,7 @@ query User($productName: String!){
     price
   }
 }
-
-<!-- METHOD 2 -->
-query GetUsers($userId: ID!){
-  user(id: $userId) {
-    username
-    name
-    email
-    favoriteProducts {
-      productId
-      productName
-      price
-    }
-  }
-}
+```
 
 1. What is GraphQL? Why do we need?
 2. What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
@@ -86,7 +82,7 @@ query GetUsers($userId: ID!){
 16. How to define query to fetch data of Users and Movies data in one-go?
 
 
-# Setting Default Value:
+### Setting Default Value
 
 If you are using an input type in mutations or queries, you can set default values in the input object (but only at the application level, not directly in the GraphQL schema):
 
