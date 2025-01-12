@@ -24,6 +24,7 @@
 - Enum values: ALL CAPITALS
 
 ### Error Message in GraphQL
+```
 "errors":[{
     "message": "Cannot return null for non-nullable field User.name.",
     "locations": [ 
@@ -35,13 +36,7 @@
     "path":[ "users", 1, "name"],
     "extension": {}
 }]
-
-### Common Questions Practice
-1. How do you define a basic type for any API data and retrieve the data w/o passing arguments in the Query type?
-2. How do you define an enum type in GraphQL?
-3. How do you pass arguments to your types in the Query type, and how do you define a resolver for that?
-4. How to define the Query arguments as mandatory?
-
+```
 
 ### Syntax for Query type
 ```
@@ -63,7 +58,7 @@ query User($productName: String!){
   }
 }
 ```
-
+### General Questions
 1. What is GraphQL? Why do we need?
 2. What is over-fecthing vs. under-fecthing of data in Restful API? What will be the impact of both?
 3. Advantages of GraphQL over RESTFUL API
